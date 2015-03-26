@@ -73,7 +73,7 @@ Change the message to report, "Hello Blue".
 
 Push the change.
 
-Test the blue server directly, using port 5060.
+Test the blue server directly, using port 9090.
 
 Notice, it hasn't updated yet...
 
