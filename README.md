@@ -24,22 +24,26 @@ To ensure we have a git repo that will always have files that reflect the most c
 
 ##### Post-Receive Hook
 
-Inside `$ROOT/deploy/green.git/hooks/` inside a `post-receive` file, place the following:
+Inside `$ROOT/green.git/hooks/` inside a `post-receive` file, place the following:
 
-    GIT_WORK_TREE=$ROOT/deflight/deploy/green-www/ git checkout -f
-
-You must create the *-www folder manually.
-You may have to add executable permissions using in *nix systems `chmod +x post-receive`.
-**Ensure that there is a script header**, such as `#!/bin/sh`, on the first line.
+    GIT_WORK_TREE=$ROOT/green-www/ git checkout -f
 
 Repeat for blue.
 
+**Hints**
+
+* You must create the *-www folder manually.
+* You may have to add executable permissions using in *nix systems `chmod +x post-receive`.
+* **Ensure that there is a script header**, such as `#!/bin/sh`, on the first line.
+* For the purpose of this workshop, `$ROOT` refers to the absolute path of your folder.
+* It will not work the first time.
+
 ### Deploying Commits and Copying Bits
 
-Clone the [app repo](https://github.com/CSC-DevOps/App), and set the following remotes.
+Clone the [app repo](https://github.com/CSC-DevOps/App), and set the following remotes.  See help on [file protocol syntax](http://stackoverflow.com/questions/947228/how-to-use-file-protocol-to-access-a-directory-on-local-system).
 
-    git remote add blue file://$ROOT/deploy/blue.git
-    git remote add green file://$ROOT/deploy/green.git
+    git remote add blue file://$ROOT/blue.git
+    git remote add green file://$ROOT/green.git
 
 You can now push changes in the following manner.
 
@@ -58,6 +62,8 @@ Then bring up the infrastructure:
 
     node infrastructure
 
+When you first run it.  It will not work!  Notice that *-www, doesn't have any node_modules/ installed.  Think about some of the conceptual issues of deploying code versus a build.  For now, you can add into a hook, a step to run: "npm install".
+
 You should be able to visit localhost:8080 and access the green slice!
 In expanding on this concept, we could do the same exact steps, but on a different AWS instances, droplets, etc.
 
@@ -71,7 +77,7 @@ Test the blue server directly, using port 5060.
 
 Notice, it hasn't updated yet...
 
-You will need to modify how "forever" is run, by including a "--watch" flag which will restart the process if the file it is running changes.
+You will need to modify how "forever" is run, by including a "--watch" flag which will restart the process if the file it is running changes.  Think carefully on where to place the flag.
 
 Push another change, "Hello Blue 2".  Now see if you can observe on the blue server.
 
