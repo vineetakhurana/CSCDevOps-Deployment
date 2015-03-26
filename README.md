@@ -30,6 +30,7 @@ Inside `$ROOT/deploy/green.git/hooks/` inside a `post-receive` file, place the f
 
 You must create the *-www folder manually.
 You may have to add executable permissions using in *nix systems `chmod +x post-receive`.
+**Ensure that there is a script header**, such as `#!/bin/sh`, on the first line.
 
 Repeat for blue.
 
