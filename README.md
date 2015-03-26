@@ -35,7 +35,7 @@ Repeat for blue.
 
 ### Deploying Commits and Copying Bits
 
-Clone the app repo, and set the following remotes.
+Clone the [app repo](https://github.com/CSC-DevOps/App), and set the following remotes.
 
     git remote add blue file://$ROOT/deploy/blue.git
     git remote add green file://$ROOT/deploy/green.git
