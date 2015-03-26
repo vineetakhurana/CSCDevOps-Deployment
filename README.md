@@ -2,6 +2,11 @@
 
 In this workshop, we'll cover the basics of setting up a barebone deployment pipeline, in support of a green-blue deployment strategy.  We will be able to build upon this exercise in the upcoming homework and DEPLOYMENT milestone.
 
+To start with, you'll need some files in this repo to help setup the blue-green infrastructure.
+
+    git clone https://github.com/CSC-DevOps/Deployment.git
+    npm install
+
 ### Initializing our endpoints.
 
 We'll create two endpoints for our deployment, a "green" endpoint for our baseline, and a "blue" endpoint for our test commits.  We will be using git repositories to help with *copying over bits*.  [See guide](http://toroid.org/ams/git-website-howto) for more details.
