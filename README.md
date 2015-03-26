@@ -77,7 +77,7 @@ Test the blue server directly, using port 9090.
 
 Notice, it hasn't updated yet...
 
-You will need to modify how "forever" is run, by including a "--watch" flag which will restart the process if the file it is running changes.  Think carefully on where to place the flag.
+You will need to modify how "forever" is run, by including a "--watch" flag which will restart the process if the file it is running changes.  Think carefully on where to place the flag.  You may also need to use "--watchDirectory" depending on where you have placed the deploy folders.
 
 Push another change, "Hello Blue 2".  Now see if you can observe on the blue server.
 
