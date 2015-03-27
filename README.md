@@ -45,7 +45,7 @@ Repeat for blue.
 
 ### Deploying Commits and Copying Bits
 
-Clone the [app repo](https://github.com/CSC-DevOps/App), and set the following remotes.  See help on [file protocol syntax](http://stackoverflow.com/questions/947228/how-to-use-file-protocol-to-access-a-directory-on-local-system).
+Clone the [app repo](https://github.com/CSC-DevOps/App), and set the following remotes.  See help on [file protocol syntax](http://en.wikipedia.org/wiki/File_URI_scheme#Format).
 
     git remote add blue file://$ROOT/blue.git
     git remote add green file://$ROOT/green.git
