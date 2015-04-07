@@ -43,11 +43,15 @@ The queue 'items' is used to store images in the main.js of the app.
 
 In infrastructure.js, on intercepting a /switch request, if the current target was BLUE, the 'items' queue from blue redis instance are captured and copied to a new queue using **lrange**. This list's items are then pushed on the 'items' queue of green redis instance using **rpush**.
 
-Similarly it is pushed from the 'items' queue of green redis instance to blue if current target was green before switch!
+Similarly, images are pushed from the 'items' queue of green redis instance to blue if current target was green before switch!
 
 ###Demonstrate mirroring
 
+A 'flag' variable is used to check for mirroring.
 
+Depending on the current target, the POST request is handled for both the instances.
+
+The /upload request is intercepted and serviced for the current target. Another **proxy.web( req, res, {target: TARGET });** is done for the other TARGET.
 
 
   
