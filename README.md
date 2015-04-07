@@ -2,6 +2,7 @@
 
 Create the folder structure
 /deploy
+
 -blue.git
 
 -blue-www
@@ -20,5 +21,11 @@ Create the folder structure
   
   *npm install*
   
+  Similarly for green.git
+  
+###Create blue/green infrastructure
+
+The infrastructure.js has set PORT 5060 for green-www's main.js to be executed. Also, PORT 9090 is dedicated for the blue instance to run.
+Two redis instances have been created to run on 6379 and 6380 each.
   
   
