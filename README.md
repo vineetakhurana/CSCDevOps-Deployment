@@ -23,9 +23,22 @@ Create the folder structure
   
   Similarly for green.git
   
-###Create blue/green infrastructure
+###Create blue/green infrastructure:
 
-The infrastructure.js has set PORT 5060 for green-www's main.js to be executed. Also, PORT 9090 is dedicated for the blue instance to run.
+The infrastructure.js has set PORT 5060 for green-www's main.js i.e. green instance of the app to be executed. Also, PORT 9090 is set for the blue instance to run. Target has been set to BLUE.
+
 Two redis instances have been created to run on 6379 and 6380 each.
-  
+
+The -watch and --watchDierctory flags have been set to maonitor any changes made.
+
+###Demonstrate /switch route:
+
+infrastructure.js deals with intercepting /switch request.
+
+It will switch from GREEN to BLUE if target before switch was GREEN and vice-versa.
+
+
+
+
+
   
