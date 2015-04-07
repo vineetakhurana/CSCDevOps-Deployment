@@ -51,7 +51,7 @@ A 'flag' variable is used to check for mirroring.
 
 Depending on the current target, the POST request is handled for both the instances.
 
-The /upload request is intercepted and serviced for the current target. Another **proxy.web( req, res, {target: TARGET });** is done for the other TARGET.
+The POST request is intercepted and serviced for the current target. Another **proxy.web( req, res, {target: TARGET });** is performed for the other TARGET so that /upload request is also sent for the other target.
 
 
   
