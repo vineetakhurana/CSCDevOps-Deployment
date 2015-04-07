@@ -1,3 +1,6 @@
+Source code for app with main.js:
+https://github.com/vineetakhurana/CSCDevOps-Queue-Proxy
+
 ###Complete git/hook setup
 
 Create the folder structure
