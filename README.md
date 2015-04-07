@@ -29,7 +29,7 @@ The infrastructure.js has set PORT 5060 for green-www's main.js i.e. green insta
 
 Two redis instances have been created to run on 6379(for blue) and 6380(for green) each.
 
-The -watch and --watchDierctory flags have been set to maonitor any changes made.
+The -watch and --watchDierctory flags have been set to maonitor any changes made to the source repo while forever runs the app on both ports.
 
 ###Demonstrate /switch route:
 
