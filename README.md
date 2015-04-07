@@ -27,7 +27,7 @@ Create the folder structure
 
 The infrastructure.js has set PORT 5060 for green-www's main.js i.e. green instance of the app to be executed. Also, PORT 9090 is set for the blue instance to run. Target has been set to BLUE.
 
-Two redis instances have been created to run on 6379 and 6380 each.
+Two redis instances have been created to run on 6379(for blue) and 6380(for green) each.
 
 The -watch and --watchDierctory flags have been set to maonitor any changes made.
 
